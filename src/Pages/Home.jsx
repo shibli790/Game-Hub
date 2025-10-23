@@ -60,7 +60,7 @@ const Home = () => {
             <motion.div
               key={g.id}
               whileHover={{ scale: 1.02 }}
-              className="card bg-base-200 shadow-lg card-hover smooth"
+              className="card bg-[#16171b] shadow-lg shadow-[#862351] card-hover smooth"
             >
               <figure className="aspect-video overflow-hidden">
                 <img
@@ -81,7 +81,7 @@ const Home = () => {
                     to={`/games/${g.id}`}
                     className="btn btn-sm btn-secondary"
                   >
-                    View Details
+                    View Details 
                   </Link>
                 </div>
               </div>
