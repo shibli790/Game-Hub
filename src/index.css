@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@tailwind utilities;
+
+
+.card-hover:hover {
+  transform: translateY(-4px);
+}
+.smooth {
+  transition: all .2s ease-in-out;
+}

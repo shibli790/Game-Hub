@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "PUBG Mobile",
+    "coverPhoto": "https://i.ibb.co.com/zTyVR0gS/PUBG.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.tencent.ig",
+    "description": "PUBG Mobile: A fast-paced battle royale game where 100 players fight to be the last one standing on a shrinking map. Parachute onto an island, scavenge for weapons and gear, and engage in intense combat. Features multiple maps, modes, and seasonal updates.",
+    "ratings": "4.8",
+    "developer": "LightSpeed Studios By Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Free Fire",
+    "coverPhoto": "https://i.ibb.co.com/KjChmT72/FREE-FIRE-2017-2023-Emotional-Edit-Free-Fire-Old-Memories-Garena-Free-Fire.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.dts.freefireth",
+    "description": "Garena Free Fire: A fast-paced battle royale game where 50 players fight to survive on a remote island. Choose your starting point, scavenge for weapons, and outlast your opponents in intense 10-minute matches.",
+    "ratings": "4.6",
+    "developer": "Bitlane Studio"
+  },
+  {
+    "id": "3",
+    "title": "Call of Duty Mobile",
+    "coverPhoto": "https://i.ibb.co.com/zHGjvx1s/Call-of-Duty-Mobile-APK-OBB-File-Download-New-Version-XDAROM.jpg",
+    "category": "Shooter",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter",
+    "description": "Experience console-quality HD gaming on your mobile device with Call of Duty: Mobile. Engage in fast-paced 5v5 team deathmatches, battle royale survival modes, and thrilling Zombies action. Customize your loadouts, compete in ranked matches, and join the global community of players in this free-to-play first-person shooter.",
+    "ratings": "4.6",
+    "developer": "TiMi Studio Group"
+  }
+]
