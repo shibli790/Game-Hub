@@ -16,9 +16,9 @@ export default function Profile(){
     <div className="max-w-2xl mx-auto">
       <div className="card bg-gradient-to-br from-[#c4007cb7] to-[#000000]">
         <div className="card-body">
-          <div className="flex gap-4 items-center">
+          <div className="md:flex gap-4 items-center">
             <img
-              className="w-50  rounded-full border-2 mr-8 border-[#ff4800]"
+              className="md:w-50  rounded-full border-2 mr-8 border-[#ff4800]"
               src={user?.photoURL}
               alt="avatar"
             />
