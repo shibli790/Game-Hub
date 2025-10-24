@@ -27,7 +27,10 @@ export default function Forgot(){
 
   return (
     <div className="max-w-md mx-auto">
-      <form onSubmit={handleReset} className="card bg-base-200">
+      <form
+        onSubmit={handleReset}
+        className="card bg-gradient-to-br from-[#c4007cb7] to-[#000000]"
+      >
         <div className=" flex flex-col mx-auto p-12 gap-4">
           <h2 className="font-bold text-center text-[#f43098] ">
             Forgot Password
