@@ -9,6 +9,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import Newsletter from './Newsletter'
+import { FaStar } from 'react-icons/fa';
 
 
 const Home = () => {
@@ -54,7 +55,9 @@ const Home = () => {
 
       {/* Popular Games */}
       <section className="space-y-6">
-        <h3 className="text-2xl md:text-3xl font-bold">Popular Games </h3>
+        <h3 className="text-2xl  md:text-3xl text-center  font-bold">
+          Popular Games{' '}
+        </h3>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {popular.map(g => (
             <motion.div
@@ -69,19 +72,24 @@ const Home = () => {
                   className="w-full h-full object-cover"
                 />
               </figure>
-              <div className="card-body">
+              <div className="p-5">
                 <h4 className="card-title">
                   {g.title}
-                  <div className="badge badge-primary">{g.category}</div>
+                  <div className="text-[13px] text-[#ffffffc7] font-light px-[5px] rounded-2xl bg-[#605dff]">
+                    {g.category}
+                  </div>
                 </h4>
                 <p className="opacity-80 line-clamp-2">{g.description}</p>
                 <div className="card-actions justify-between items-center mt-2">
-                  <div className="badge badge-accent">⭐ {g.ratings}</div>
+                  <div className="flex gap-1 items-center bg-[#00d3bb] px-[5px] rounded-2xl text-[15px]">
+                    <FaStar className="text-yellow-300 text-[13px]" />
+                    {g.ratings}
+                  </div>
                   <Link
                     to={`/games/${g.id}`}
-                    className="btn btn-sm btn-secondary"
+                    className="btn bg-[#f43098] rounded-[8px]"
                   >
-                    View Details 
+                    View Details
                   </Link>
                 </div>
               </div>
