@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, NavLink, useNavigate } from 'react-router';
 import { TfiGame } from 'react-icons/tfi';
-// import { SiGameandwatch } from 'react-icons/si';
 import useAuth from '../hooks/useAuth';
 import { toast } from 'react-toastify';
 import { IoLogOut } from 'react-icons/io5';
