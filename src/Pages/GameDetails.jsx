@@ -34,34 +34,26 @@ const GameDetails = () => {
           {game.title}
         </h1>
         <div className="flex flex-wrap gap-2 mb-4">
-          <div className=" flex items-center text-[13px] text-[#ffffffc7] font-bold px-[5px] rounded-2xl bg-[#605dff]">
+          <div className=" flex items-center text-[13px] text-[#ffffffc7] font-bold px-[5px] rounded-2xl bg-gradient-to-br from-[#5653f3] to-[#605dff]">
             {game.category}
           </div>
           <div className="flex gap-1 items-center bg-[#00d3bb] px-[5px] rounded-2xl text-[15px]">
             <FaStar className="text-yellow-300" />
             {game.ratings}
           </div>
-          <div className="bg-[#000] text-[13px] p-1 rounded-2xl">
+          <div className="bg-gradient-to-r from-[#12151a] via-[#1a1e24] to-[#2c3038] text-[13px] p-1 rounded-2xl">
             Dev: {game.developer}
           </div>
         </div>
         <p className="opacity-90 leading-relaxed mb-6">{game.description}</p>
         <div className="flex gap-3">
           <a
-            className="btn bg-[#f43098] rounded-[8px]"
+            className="btn bg-gradient-to-br from-[#f43098] to-[#a52dbd] rounded-[8px]"
             href={game.downloadLink}
             target="_blank"
             rel="noreferrer"
           >
             Install / Visit
-          </a>
-          <a
-            className="p-2 rounded-[8px]   bg-[#00000049]"
-            href={game.downloadLink}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Support Dev
           </a>
         </div>
       </div>

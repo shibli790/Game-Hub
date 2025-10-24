@@ -37,21 +37,21 @@ export default function Developers(){
                 {d.developer}
               </h3>
               <p className=" ">
-                <span className="font-bold text-[#f43098]">
+                <span className="font-bold h-5 w-5 text-[#f43098]">
                   Developer Bio :{' '}
                 </span>
                 {d.description}
               </p>
-              {/* <div className="card-actions">
+              <div className=" flex justify-center items-center">
                 <a
-                  className="btn btn-sm btn-primary"
-                  href={d.site}
+                  className="p-2 rounded-[8px]   bg-gradient-to-r from-[#12151a] via-[#1a1e24] to-[#2c3038]"
+                  href={d.downloadLink}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Visit
+                  Support Dev
                 </a>
-              </div> */}
+              </div>
             </div>
           </div>
         ))}

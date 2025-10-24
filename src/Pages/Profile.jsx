@@ -23,7 +23,7 @@ export default function Profile(){
               alt="avatar"
             />
             <div>
-              <h1 className=" text-2xl font-bold text-center  mb-6 text-[#f43098]">
+              <h1 className=" text-2xl font-bold text-center  mb-6 text-transparent bg-clip-text bg-gradient-to-br from-[#f43098] to-[#a52dbd]">
                 {' '}
                 PROFILE INFO
               </h1>
@@ -40,7 +40,7 @@ export default function Profile(){
           <div className="card-actions justify-end">
             <Link
               to="/my-profile/update"
-              className="btn bg-[#f43098] rounded-2xl"
+              className="btn bg-gradient-to-br from-[#f43098] to-[#a52dbd] rounded-2xl"
             >
               Update Info
             </Link>

@@ -75,7 +75,7 @@ const Home = () => {
               <div className="p-5">
                 <h4 className="card-title">
                   {g.title}
-                  <div className="text-[13px] text-[#ffffffc7] font-light px-[5px] rounded-2xl bg-[#605dff]">
+                  <div className="text-[13px] text-[#ffffffc7] font-light px-[5px] rounded-2xl bg-gradient-to-br from-[#5653f3] to-[#605dff]">
                     {g.category}
                   </div>
                 </h4>
@@ -87,7 +87,7 @@ const Home = () => {
                   </div>
                   <Link
                     to={`/games/${g.id}`}
-                    className="btn bg-[#f43098] rounded-[8px]"
+                    className="btn bg-gradient-to-br from-[#f43098] to-[#a52dbd]"
                   >
                     View Details
                   </Link>

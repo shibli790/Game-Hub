@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink, useNavigate } from 'react-router';
 import { TfiGame } from 'react-icons/tfi';
-import { SiGameandwatch } from 'react-icons/si';
+// import { SiGameandwatch } from 'react-icons/si';
 import useAuth from '../hooks/useAuth';
 import { toast } from 'react-toastify';
 import { IoLogOut } from 'react-icons/io5';
@@ -39,7 +39,9 @@ const Navbar = () => {
         <Link to="/" className="flex items-center gap-2">
           <TfiGame className="text-4xl text-[#f43098]" />
           <div className="ml-2">
-            <span className="font-bold text-2xl text-[#f43098]">GameHub</span>
+            <span className="font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-br from-[#f43098] to-[#a52dbd]">
+              GameHub
+            </span>
           </div>
         </Link>
 
@@ -54,7 +56,7 @@ const Navbar = () => {
             <li>
               <Active to="/">Home</Active>
             </li>
-            <li className='text-nowrap'>
+            <li className="text-nowrap">
               <Active to="/my-profile">My Profile</Active>
             </li>
           </ul>
@@ -63,10 +65,16 @@ const Navbar = () => {
         )}
         {!user ? (
           <div className="grid grid-cols-2 gap-2">
-            <Link to="/login" className="btn w-fit bg-[#605dff]">
+            <Link
+              to="/login"
+              className="btn w-fit bg-gradient-to-br from-[#5653f3] to-[#605dff]"
+            >
               Login
             </Link>
-            <Link to="/register" className="btn bg-[#f43098]">
+            <Link
+              to="/register"
+              className="btn bg-gradient-to-br from-[#f43098] to-[#a52dbd]"
+            >
               Register
             </Link>
           </div>
@@ -102,7 +110,7 @@ const Navbar = () => {
             </div>
             <button
               onClick={handleSignOut}
-              className="btn bg-[#f43098] rounded-2xl "
+              className="btn bg-gradient-to-br from-[#f43098] to-[#a52dbd] rounded-2xl "
             >
               {' '}
               Logout <IoLogOut />

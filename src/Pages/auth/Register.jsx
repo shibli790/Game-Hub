@@ -44,7 +44,10 @@ export default function Register() {
 
   return (
     <div className="max-w-md mx-auto">
-      <form onSubmit={handleRegister} className=" rounded-2xl bg-[#00000063]">
+      <form
+        onSubmit={handleRegister}
+        className=" rounded-2xl bg-gradient-to-r from-[#12151a] via-[#1a1e24] to-[#1e2025]"
+      >
         <div className="flex flex-col gap-2 p-12">
           <h2 className="text-3xl text-[#5552ff] font-bold text-center">
             Create account
@@ -91,9 +94,15 @@ export default function Register() {
             />
           </label>
 
+          <div className="flex items-center justify-center gap-2 my-2">
+            <div className="h-px w-16 bg-white/30"></div>
+            <span className="text-sm text-white/70">or</span>
+            <div className="h-px w-16 bg-white/30"></div>
+          </div>
+
           <button
             disabled={loading}
-            className="p-2 rounded-xl bg-[#5552ff] mt-2"
+            className="p-2 rounded-xl bg-gradient-to-br from-[#5653f3] to-[#605dff] mt-2"
           >
             {loading ? 'Creating...' : 'Register'}
           </button>

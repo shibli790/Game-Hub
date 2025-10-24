@@ -26,7 +26,9 @@ export default function UpdateProfile(){
     <div className="max-w-md mx-auto">
       <form onSubmit={handleSubmit} className="card bg-base-200">
         <div className=" flex flex-col mx-auto p-12 gap-4">
-          <h2 className="font-bold text-center text-[#f43098]  ">Update Profile Info</h2>
+          <h2 className="font-bold text-center text-transparent bg-clip-text bg-gradient-to-br from-[#f43098] to-[#a52dbd]  ">
+            Update Profile Info
+          </h2>
           <label>
             <span className="py-3">Photo URL</span>
             <input
@@ -43,7 +45,9 @@ export default function UpdateProfile(){
               className="input "
             />
           </label>
-          <button className="btn bg-[#f43098] rounded-2xl mt-3">Save Info</button>
+          <button className="btn bg-gradient-to-br from-[#f43098] to-[#a52dbd] rounded-2xl mt-3">
+            Save Info
+          </button>
         </div>
       </form>
     </div>

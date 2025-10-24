@@ -23,7 +23,7 @@ const Newsletter = () => {
           />
           <button
             type="submit"
-            class="h-12 shrink-0 rounded-full bg-pink-500 px-6 text-base font-semibold text-white shadow-lg hover:shadow-xl "
+            class="h-12 shrink-0 rounded-full bg-gradient-to-br from-[#f43098] to-[#a52dbd] px-6 text-base font-semibold text-white shadow-lg hover:shadow-xl "
           >
             Subscribe
           </button>
