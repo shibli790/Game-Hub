@@ -23,12 +23,16 @@ export default function Profile(){
               alt="avatar"
             />
             <div>
+              <h1 className=" text-2xl font-bold text-center  mb-6 text-[#f43098]">
+                {' '}
+                PROFILE INFO
+              </h1>
               <h2 className="text-2xl mb-3">
                 <span>User Name : </span>
                 <span className="text-[#f43098]">{user?.displayName}</span>
               </h2>
-              <p className='text-1xl'>
-                User Email : 
+              <p className="text-1xl">
+                User Email :
                 <span className="text-[#f43098]"> {user?.email}</span>
               </p>
             </div>

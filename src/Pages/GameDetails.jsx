@@ -34,17 +34,21 @@ const GameDetails = () => {
           {game.title}
         </h1>
         <div className="flex flex-wrap gap-2 mb-4">
-          <div className="badge badge-primary">{game.category}</div>
-          <div className="badge badge-accent">
-            <FaStar className='text-yellow-300' />
+          <div className=" flex items-center text-[13px] text-[#ffffffc7] font-bold px-[5px] rounded-2xl bg-[#605dff]">
+            {game.category}
+          </div>
+          <div className="flex gap-1 items-center bg-[#00d3bb] px-[5px] rounded-2xl text-[15px]">
+            <FaStar className="text-yellow-300" />
             {game.ratings}
           </div>
-          <div className="badge badge-neutral">Dev: {game.developer}</div>
+          <div className="bg-[#000] text-[13px] p-1 rounded-2xl">
+            Dev: {game.developer}
+          </div>
         </div>
         <p className="opacity-90 leading-relaxed mb-6">{game.description}</p>
         <div className="flex gap-3">
           <a
-            className="btn btn-secondary"
+            className="btn bg-[#f43098] rounded-[8px]"
             href={game.downloadLink}
             target="_blank"
             rel="noreferrer"
@@ -52,7 +56,7 @@ const GameDetails = () => {
             Install / Visit
           </a>
           <a
-            className="btn btn-outline"
+            className="p-2 rounded-[8px]   bg-[#00000049]"
             href={game.downloadLink}
             target="_blank"
             rel="noreferrer"
