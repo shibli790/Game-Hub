@@ -54,16 +54,16 @@ const Navbar = () => {
             <li>
               <Active to="/">Home</Active>
             </li>
-            <li>
-              <Active to="/developers">Developers</Active>
+            <li className='text-nowrap'>
+              <Active to="/my-profile">My Profile</Active>
             </li>
           </ul>
         ) : (
           ''
         )}
         {!user ? (
-          <div className="flex items-center gap-2">
-            <Link to="/login" className="btn bg-[#605dff]">
+          <div className="grid grid-cols-2 gap-2">
+            <Link to="/login" className="btn w-fit bg-[#605dff]">
               Login
             </Link>
             <Link to="/register" className="btn bg-[#f43098]">
