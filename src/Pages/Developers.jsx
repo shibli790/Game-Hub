@@ -20,7 +20,10 @@ export default function Developers(){
       <h1 className="text-3xl font-extrabold">Developer Spotlight</h1>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {popular.map(d => (
-          <div key={d.id} className="card bg-base-200">
+          <div
+            key={d.id}
+            className="card bg-gradient-to-br from-[#c4007cb7] to-[#000000]"
+          >
             <div className="p-6 flex flex-col gap-3">
               <figure className="aspect-video overflow-hidden">
                 <img
@@ -42,7 +45,7 @@ export default function Developers(){
                 </span>
                 {d.description}
               </p>
-              <div className=" flex justify-center items-center">
+              <div className="">
                 <a
                   className="p-2 rounded-[8px]   bg-gradient-to-r from-[#12151a] via-[#1a1e24] to-[#2c3038]"
                   href={d.downloadLink}

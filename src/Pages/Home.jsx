@@ -63,7 +63,7 @@ const Home = () => {
             <motion.div
               key={g.id}
               whileHover={{ scale: 1.02 }}
-              className="card bg-[#16171b] shadow-lg shadow-[#862351] card-hover smooth"
+              className="card gap-2 bg-[#16171b] shadow-lg shadow-[#862351] card-hover smooth"
             >
               <figure className="aspect-video overflow-hidden">
                 <img
@@ -72,14 +72,14 @@ const Home = () => {
                   className="w-full h-full object-cover"
                 />
               </figure>
-              <div className="p-5">
-                <h4 className="card-title">
+              <div className="p-5 ">
+                <h4 className="flex items-center text-2xl gap-2 font-bold mb-2">
                   {g.title}
                   <div className="text-[13px] text-[#ffffffc7] font-light px-[5px] rounded-2xl bg-gradient-to-br from-[#5653f3] to-[#605dff]">
                     {g.category}
                   </div>
                 </h4>
-                <p className="opacity-80 line-clamp-2">{g.description}</p>
+                <p className="opacity-80 line-clamp-2 mb-3">{g.description}</p>
                 <div className="card-actions justify-between items-center mt-2">
                   <div className="flex gap-1 items-center bg-[#00d3bb] px-[5px] rounded-2xl text-[15px]">
                     <FaStar className="text-yellow-300 text-[13px]" />
@@ -99,7 +99,7 @@ const Home = () => {
       </section>
 
       {/* Newsletter */}
-      <Newsletter></Newsletter>
+      <Newsletter/>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { TfiGame } from 'react-icons/tfi';
 import useAuth from '../hooks/useAuth';
 import { toast } from 'react-toastify';
 import { IoLogOut } from 'react-icons/io5';
+import { RiMenu3Fill } from 'react-icons/ri';
 
 const Active = ({ to, children }) => (
   <NavLink
@@ -35,38 +36,51 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 backdrop-blur bg-base-100/80  border-b border-base-content/10">
       <div className="container mx-auto flex justify-between px-4 md:px-6 lg:px-8 navbar">
+        <Link to="/" className="flex items-center gap-2">
+          <TfiGame className="text-4xl text-[#f43098]" />
+          <div className="ml-2">
+            <span className="font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-br from-[#f43098] to-[#a52dbd]">
+              GameHub
+            </span>
+          </div>
+        </Link>
+
+        <nav className="hidden md:flex items-center gap-1 mr-4">
+          <Active to="/">Home</Active>
+          {user && <Active to="/developers">Developers</Active>}
+          <Active to="/my-profile">My Profile</Active>
+        </nav>
+
         {!user ? (
-          <aside className='flex'>
-            <div className="dropdown ">
+          <ul className=" shadow-sm md:hidden text-center">
+            <li>
+              <Active to="/">Home</Active>
+            </li>
+            <li className="text-nowrap">
+              <Active to="/my-profile">My Profile</Active>
+            </li>
+          </ul>
+        ) : (
+          ''
+        )}
+        {!user ? (
+          <section>
+            <div className="dropdown  dropdown-bottom dropdown-end">
               <div
                 tabIndex={0}
                 role="button"
                 className="btn btn-ghost md:hidden"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  {' '}
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />{' '}
-                </svg>
+                <RiMenu3Fill className="text-2xl" />
               </div>
               <ul
                 tabIndex="-1"
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1   shadow"
+                className="menu menu-sm  dropdown-content bg-base-100 rounded-box z-1   "
               >
                 <li>
                   <Link
                     to="/login"
-                    className=" w-fit bg-gradient-to-br from-[#5653f3] to-[#605dff]"
+                    className=" w-full bg-gradient-to-br from-[#5653f3] to-[#605dff]"
                   >
                     Login
                   </Link>
@@ -81,46 +95,6 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <Link to="/" className="flex items-center gap-2">
-              <TfiGame className="text-4xl text-[#f43098]" />
-              <div className="ml-2">
-                <span className="font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-br from-[#f43098] to-[#a52dbd]">
-                  GameHub
-                </span>
-              </div>
-            </Link>
-          </aside>
-        ) : (
-          <Link to="/" className="flex items-center gap-2">
-            <TfiGame className="text-4xl text-[#f43098]" />
-            <div className="ml-2">
-              <span className="font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-br from-[#f43098] to-[#a52dbd]">
-                GameHub
-              </span>
-            </div>
-          </Link>
-        )}
-
-        <nav className="hidden md:flex items-center gap-1 mr-4">
-          <Active to="/">Home</Active>
-          {user && <Active to="/developers">Developers</Active>}
-          <Active to="/my-profile">My Profile</Active>
-        </nav>
-
-        {!user ? (
-          <ul className=" shadow-sm flex md:hidden text-center">
-            <li>
-              <Active to="/">Home</Active>
-            </li>
-            <li className="text-nowrap">
-              <Active to="/my-profile">My Profile</Active>
-            </li>
-          </ul>
-        ) : (
-          ''
-        )}
-        {!user ? (
-          <section>
             <div className=" hidden md:grid grid-cols-2 gap-2">
               <Link
                 to="/login"

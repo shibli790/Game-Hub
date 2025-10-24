@@ -46,7 +46,7 @@ export default function Register() {
     <div className="max-w-md mx-auto">
       <form
         onSubmit={handleRegister}
-        className=" rounded-2xl bg-gradient-to-r from-[#12151a] via-[#1a1e24] to-[#1e2025]"
+        className=" rounded-2xl bg-gradient-to-br from-[#000000] to-[#c4007cb7]"
       >
         <div className="flex flex-col gap-2 p-12">
           <h2 className="text-3xl text-[#5552ff] font-bold text-center">

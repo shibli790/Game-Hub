@@ -24,7 +24,10 @@ export default function UpdateProfile(){
 
   return (
     <div className="max-w-md mx-auto">
-      <form onSubmit={handleSubmit} className="card bg-base-200">
+      <form
+        onSubmit={handleSubmit}
+        className="card bg-gradient-to-br from-[#c4007cb7] to-[#000000]"
+      >
         <div className=" flex flex-col mx-auto p-12 gap-4">
           <h2 className="font-bold text-center text-transparent bg-clip-text bg-gradient-to-br from-[#f43098] to-[#a52dbd]  ">
             Update Profile Info

@@ -14,7 +14,7 @@ export default function Profile(){
 
   return (
     <div className="max-w-2xl mx-auto">
-      <div className="card bg-base-200">
+      <div className="card bg-gradient-to-br from-[#c4007cb7] to-[#000000]">
         <div className="card-body">
           <div className="flex gap-4 items-center">
             <img

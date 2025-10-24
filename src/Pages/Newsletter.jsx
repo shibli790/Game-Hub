@@ -3,7 +3,7 @@ import React from 'react';
 const Newsletter = () => {
   return (
     <>
-      <div className="rounded-2xl p-8 md:p-10 bg-neutral/40 border border-primary/20 neon-edge">
+      <div className="rounded-2xl p-8 md:p-10 bg-neutral/40 border border-primary/20 ">
         <h3 className="text-2xl  md:text-3xl text-center font-bold mb-3">
           Subscribe Newsletters
         </h3>
