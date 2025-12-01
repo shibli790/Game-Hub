@@ -17,7 +17,7 @@ const AllGamesCard = () => {
   return (
     <section className="space-y-6">
       <h2 className="text-4xl font-bold mb-6 text-center">
-        Popular <span className="text-pink-500">Games</span>
+        All <span className="text-pink-500">Games</span>
       </h2>
       <div className="grid sm:grid-cols-2  lg:grid-cols-4 gap-6">
         {popular.map(g => (

@@ -74,7 +74,7 @@ const Navbar = () => {
         {!user ? (
           <section>
             <div className="dropdown dropdown-bottom dropdown-end lg:hidden">
-              <div tabIndex={0} role="button" className="btn m-1">
+              <div tabIndex={0} role="button" className="m-1">
                 <RiMenu3Fill className="text-2xl" />
               </div>
               <ul
