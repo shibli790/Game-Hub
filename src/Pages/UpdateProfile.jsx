@@ -3,6 +3,7 @@ import useTitle from '../hooks/useTitle'
 import useAuth from '../hooks/useAuth'
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router'
+import Swal from 'sweetalert2'
 
 export default function UpdateProfile(){
   useTitle('Update Profile')
@@ -15,7 +16,14 @@ export default function UpdateProfile(){
     e.preventDefault()
     try{
       await updateUserProfile({ displayName: name, photoURL })
-      toast.success('Profile updated')
+      // toast.success('Profile updated')
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Profile updated success',
+        showConfirmButton: false,
+        timer: 1500,
+      });
       navigate('/my-profile')
     } catch(e){
       toast.error(e.message)

@@ -8,7 +8,7 @@ const PrivateRoute = ({ children }) => {
   if (loading)
     return (
       <div className="min-h-[50vh] grid place-items-center">
-        <span className="loading loading-ring loading-lg"></span>
+        <span className="loading text-6xl  loading-spinner text-error"></span>
       </div>
     );
   if (!user) return <Navigate to="/login" state={{ from: location }} replace />;

@@ -12,7 +12,7 @@ const MainLayout = () => {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
 
 export default MainLayout

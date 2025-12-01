@@ -9,13 +9,16 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import Newsletter from './Newsletter'
+
 import { FaStar } from 'react-icons/fa';
+import ChoiseUs from './ChoiseUs'
+import FeaturedDevelopers from './FeaturedDevelopers'
 
 
 const Home = () => {
   useTitle('Home')
   const [games,setGames] = useState([])
-  const popular = useMemo(()=>[...games].sort((a,b)=>parseFloat(b.ratings)-parseFloat(a.ratings)).slice(0,3), [games])
+  const popular = useMemo(()=>[...games].sort((a,b)=>parseFloat(b.ratings)-parseFloat(a.ratings)).slice(0,4), [games])
 
   useEffect(()=>{
     fetchGames().then(setGames).catch(console.error)
@@ -32,7 +35,7 @@ const Home = () => {
           autoplay={{ delay: 3000 }}
         >
           {popular.map(i => (
-            <SwiperSlide key={i.id}>
+            <SwiperSlide key={i.coverPhoto}>
               <div
                 className="h-[360px] md:h-[420px] bg-cover bg-center"
                 style={{
@@ -55,14 +58,15 @@ const Home = () => {
 
       {/* Popular Games */}
       <section className="space-y-6">
-        <h3 className="text-2xl  md:text-3xl text-center  font-bold">
-          Popular Games{' '}
-        </h3>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <h2 className="text-4xl font-bold mb-6 text-center">
+          Popular <span className="text-pink-500">Games</span>
+        </h2>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {popular.map(g => (
             <Link to={`/games/${g.id}`}>
               <motion.div
-                key={g.id}
+                key={g.coverPhoto}
                 whileHover={{ scale: 1.02 }}
                 className="card gap-2 bg-[#16171b] shadow-lg shadow-[#862351] card-hover smooth"
               >
@@ -100,10 +104,20 @@ const Home = () => {
             </Link>
           ))}
         </div>
+        <div className="flex justify-center">
+          <Link
+            to="/allgamescard"
+            className="btn bg-gradient-to-br from-[#f43098] to-[#a52dbd]"
+          >
+            See More
+          </Link>
+        </div>
       </section>
 
       {/* Newsletter */}
+      <FeaturedDevelopers />
       <Newsletter />
+      <ChoiseUs />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { useLocation, } from 'react-router-dom'
 import useAuth from '../../hooks/useAuth'
 import { toast } from 'react-toastify'
 import useTitle from '../../hooks/useTitle'
+import Swal from 'sweetalert2'
 
 export default function Forgot(){
   useTitle('Forgot Password')
@@ -18,7 +19,14 @@ export default function Forgot(){
     e.preventDefault()
     try{
       await resetPassword(email)
-      toast.success('Reset link sent to email. Redirecting to Gmail...')
+      // toast.success('Reset link sent to email. Redirecting to Gmail...')
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Reset link sent to email. Redirecting to Gmail...',
+        showConfirmButton: false,
+        timer: 1500,
+      });
       window.location.href = 'https://mail.google.com'
     } catch(e){
       toast.error(e.message)

@@ -5,6 +5,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { toast } from 'react-toastify';
 import useAuth from '../../hooks/useAuth';
 import useTitle from '../../hooks/useTitle';
+import Swal from 'sweetalert2';
 
 export default function Login() {
   useTitle('Login');
@@ -23,7 +24,13 @@ export default function Login() {
     setLoading(true);
     try {
       await signIn(email, password); 
-      toast.success('Welcome back!');
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Welcome back!',
+        showConfirmButton: false,
+        timer: 1500,
+      });
       navigate(from, { replace: true });
     } catch (e) {
       console.log(e);
@@ -39,7 +46,14 @@ export default function Login() {
     setLoading(true);
     try {
       await googleLogin();
-      toast.success('Logged in with Google');
+      // toast.success('Logged in with Google');
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Logged in with Google success',
+        showConfirmButton: false,
+        timer: 1500,
+      });
       navigate(from, { replace: true });
     } catch (e) {
       toast.error(e.message);

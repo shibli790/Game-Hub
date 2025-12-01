@@ -10,6 +10,8 @@ import NotFound from '../Pages/NotFound';
 import PrivateRoute from './PrivateRoute';
 import UpdateProfile from '../Pages/UpdateProfile';
 import Forgot from '../Pages/auth/Forgot';
+import AllGamesCard from '../Pages/AllGamesCard';
+import Contact from '../Pages/Contact';
 
 const router = createBrowserRouter([
   {
@@ -20,19 +22,19 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       {
         path: 'developers',
-        element: (
-          <PrivateRoute>
-            <Developers />
-          </PrivateRoute>
-        ),
+        element: <Developers />,
+      },
+      {
+        path: 'allgamescard',
+        element: <AllGamesCard />,
+      },
+      {
+        path: 'contact',
+        element: <Contact />,
       },
       {
         path: 'games/:id',
-        element: (
-          <PrivateRoute>
-            <GameDetails />
-          </PrivateRoute>
-        ),
+        element: <GameDetails />,
       },
       { path: 'login', element: <Login /> },
       { path: 'register', element: <Register /> },

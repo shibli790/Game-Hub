@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 import useAuth from '../../hooks/useAuth';
 import useTitle from '../../hooks/useTitle';
+import Swal from 'sweetalert2';
 
 function isValidPassword(pw) {
   const hasUpper = /[A-Z]/.test(pw);
@@ -33,7 +34,14 @@ export default function Register() {
     try {
       await createUser(email, password);
       await updateUserProfile({ displayName: name, photoURL: photoURL });
-      toast.success('Account created!');
+      // toast.success('Account created!');
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Account created! Success',
+        showConfirmButton: false,
+        timer: 1500,
+      });
       navigate('/');
     } catch (e) {
       toast.error(e.message);

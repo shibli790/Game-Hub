@@ -5,6 +5,7 @@ import useAuth from '../hooks/useAuth';
 import { toast } from 'react-toastify';
 import { IoLogOut } from 'react-icons/io5';
 import { RiMenu3Fill } from 'react-icons/ri';
+import Swal from 'sweetalert2';
 
 const Active = ({ to, children }) => (
   <NavLink
@@ -26,7 +27,14 @@ const Navbar = () => {
   const handleSignOut = async () => {
     try {
       await signOutUser();
-      toast.success('Signed out');
+      // toast.success('Signed out');
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Signed out success ',
+        showConfirmButton: false,
+        timer: 1500,
+      });
       navigate('/');
     } catch (e) {
       toast.error(e.message);
@@ -45,19 +53,19 @@ const Navbar = () => {
           </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-1 mr-4">
+        <nav className="hidden md:hidden lg:flex items-center gap-1 mr-4">
           <Active to="/">Home</Active>
-          {user && <Active to="/developers">Developers</Active>}
+          <Active to="/allgamescard">All Games</Active>
+          {/* {user && <Active to="/developers">Developers</Active>} */}
+         <Active to="/developers">Developers</Active>
+          <Active to="/contact">Contact Us</Active>
           <Active to="/my-profile">My Profile</Active>
         </nav>
 
         {!user ? (
-          <ul className=" shadow-sm md:hidden text-center">
+          <ul className=" shadow-sm md: text-center lg:hidden">
             <li>
               <Active to="/">Home</Active>
-            </li>
-            <li className="text-nowrap">
-              <Active to="/my-profile">My Profile</Active>
             </li>
           </ul>
         ) : (
@@ -65,37 +73,42 @@ const Navbar = () => {
         )}
         {!user ? (
           <section>
-            <div className="dropdown  dropdown-bottom dropdown-end">
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost md:hidden"
-              >
+            <div className="dropdown dropdown-bottom dropdown-end lg:hidden">
+              <div tabIndex={0} role="button" className="btn m-1">
                 <RiMenu3Fill className="text-2xl" />
               </div>
               <ul
                 tabIndex="-1"
-                className="menu menu-sm  dropdown-content bg-base-100 rounded-box z-1   "
+                className="dropdown-content menu bg-transparent rounded-box z-1 w-32 p-2 shadow-sm"
               >
-                <li>
-                  <Link
-                    to="/login"
-                    className=" w-full bg-gradient-to-br from-[#5653f3] to-[#605dff]"
-                  >
-                    Login
-                  </Link>
+                <li className="text-nowrap">
+                  <Active to="/allgamescard">All Games</Active>
+                </li>
+                <li className="text-nowrap">
+                  <Active to="/contact">Contact Us</Active>
+                </li>
+                <li className="text-nowrap">
+                  <Active to="/my-profile">My Profile</Active>
                 </li>
                 <li>
-                  <Link
+                  <Active
+                    to="/login"
+                    className=" hover:text-[#b6b6b6] bg-gradient-to-br"
+                  >
+                    Login
+                  </Active>
+                </li>
+                <li>
+                  <Active
                     to="/register"
-                    className=" w-fit bg-gradient-to-br from-[#f43098] to-[#a52dbd]"
+                    className=" hover:text-[#fff]  bg-gradient-to-br"
                   >
                     Register
-                  </Link>
+                  </Active>
                 </li>
               </ul>
             </div>
-            <div className=" hidden md:grid grid-cols-2 gap-2">
+            <div className=" hidden md:hidden lg:grid grid-cols-2 gap-2">
               <Link
                 to="/login"
                 className="btn w-fit bg-gradient-to-br from-[#5653f3] to-[#605dff]"
@@ -137,6 +150,12 @@ const Navbar = () => {
                 </li>
                 <li className="w-full">
                   <Active to="/developers">Developers</Active>
+                </li>
+                <li className="w-full">
+                  <Active to="/allgamescard">All Games</Active>
+                </li>
+                <li className="w-full">
+                  <Active to="/contact">Contact Us</Active>
                 </li>
               </ul>
             </div>

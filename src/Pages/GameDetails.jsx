@@ -47,14 +47,14 @@ const GameDetails = () => {
         </div>
         <p className="opacity-90 leading-relaxed mb-6">{game.description}</p>
         <div className="flex gap-3">
-          <a
+          <button
             className="btn bg-gradient-to-br from-[#f43098] to-[#a52dbd] rounded-[8px]"
             href={game.downloadLink}
             target="_blank"
             rel="noreferrer"
           >
             Install / Visit
-          </a>
+          </button>
         </div>
       </div>
     </div>

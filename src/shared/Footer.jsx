@@ -7,7 +7,7 @@ export default function Footer() {
       <footer className="footer sm:footer-horizontal container mx-auto text-white p-10 border-b-2 border-slate-400">
         <aside className="grid-flow-col r flex flex-col items-start ml-5">
           <TfiGame className="text-6xl text-[#f43098]" />
-          <p className="text-lg font-semibold">
+          <p className="text-lg text-transparent bg-clip-text bg-gradient-to-br from-[#f43098] to-[#a52dbd] font-semibold">
             Game_Hub
             <br />
             Providing reliable tech since 2025
