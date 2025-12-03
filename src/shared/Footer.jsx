@@ -40,7 +40,7 @@ export default function Footer() {
       </footer>
       {/* ///////////////////////////////2nd footer */}
 
-      <div className="flex flex-col justify-center items-center text-center gap-3 text-white p-10 bg-[#00000028]">
+      <div className="flex flex-col justify-center items-center text-center gap-3 text-white p-10 ">
         <aside>
           <svg
             width="50"

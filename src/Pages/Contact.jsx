@@ -2,7 +2,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#c4007cb7] to-[#000000] shadow-lg shadow-[#862351] card-hover smooth text-white py-16 px-6">
+    <div className="min-h-screen bg-gradient-to-br rounded-md from-[#c4007cb7] to-[#000000] shadow-lg shadow-[#862351] card-hover smooth text-white py-16 px-6">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <h1 className="text-4xl font-bold text-center mb-4">
